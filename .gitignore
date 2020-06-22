@@ -1,0 +1,5 @@
+#Compiled file
+*.class
+
+#Log file
+*.log
