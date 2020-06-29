@@ -33,7 +33,7 @@ public class RoleController {
     @PostMapping("user/role")
     public DefaultRspDTO<RoleInfoDTO> getRoleById(@RequestBody RoleInfoDTO roleInfoDTO) {
         RoleInfoBO roleInfoBO = new RoleInfoBO();
-        roleInfoBO.setId(roleInfoDTO.getId());
+        roleInfoBO.setRoleId(roleInfoDTO.getRoleId());
         BeanUtils.copyProperties(roleInfoDTO, roleInfoBO);
         RolesDO rolesDO = roleService.getRoleById(roleInfoBO);
         if (rolesDO == null) {

@@ -52,8 +52,8 @@ public class LoginAuthenticationProcessor  extends AbstractGenericMatchableAuthe
         System.out.println(userInfoBO);
 
         UserInfoBO login = loginService.login(userInfoBO);
-        System.out.println(login.getId().toString()+login.getLoginName()+login.getPassword());
-        return new SimpleUserInfo(login.getId().toString(),login.getLoginName(),login.getPassword());
+        System.out.println(login.getUserId().toString()+login.getLoginName()+login.getPassword());
+        return new SimpleUserInfo(login.getUserId().toString(),login.getLoginName(),login.getPassword());
     }
 
 /**
