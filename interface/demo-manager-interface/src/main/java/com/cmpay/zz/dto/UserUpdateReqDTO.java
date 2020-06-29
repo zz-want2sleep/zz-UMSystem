@@ -16,11 +16,11 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserUpdateReqDTO {
-    private Long id;
+    private Long userId;
     private String loginName;
     private String password;
     private String email;
-    private String updateBy;
+    private Long updateBy;
     private LocalDateTime updateDate;
     private Long phonenumber;
     private Byte isUse;

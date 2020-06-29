@@ -1,0 +1,26 @@
+{
+  "requestId": "buidemo006291429150000160001",
+  "msgId": null,
+  "startDateTime": "2020-06-29T14:29:15.521",
+  "locale": "zh_CN",
+  "clientIp": "127.0.0.1",
+  "business": null,
+  "entryTx": "RoleController.getRoleById",
+  "uri": null,
+  "userId": null,
+  "token": null,
+  "loginName": null,
+  "tag": null,
+  "body": {
+    "id": 1,
+    "roleName": "管理员",
+    "note": "管什么呢？",
+    "createBy": "张哲",
+    "isUse": 0,
+    "createDate": "2020-06-29T12:51:38",
+    "updateBy": null,
+    "updateDate": null
+  },
+  "msgCd": "UPM00000",
+  "msgInfo": null
+}

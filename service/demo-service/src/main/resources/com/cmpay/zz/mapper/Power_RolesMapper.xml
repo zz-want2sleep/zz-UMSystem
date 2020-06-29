@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmpay.zz.dao.IPower_RolesDao" >
+
+    <resultMap id="BaseResultMap" type="com.cmpay.zz.entity.Power_RolesDO" >
+        <id column="pr_id" property="prId" jdbcType="BIGINT" />
+        <result column="powerid" property="powerid" jdbcType="BIGINT" />
+        <result column="roleid" property="roleid" jdbcType="BIGINT" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        pr_id, powerid, roleid
+    </sql>
+
+    <select id="get" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from power_roles
+        where pr_id = #{prId,jdbcType=BIGINT}
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Long" >
+        delete from power_roles
+        where pr_id = #{prId,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.cmpay.zz.entity.Power_RolesDO" >
+        insert into power_roles
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="prId != null" >
+                pr_id,
+            </if>
+            <if test="powerid != null" >
+                powerid,
+            </if>
+            <if test="roleid != null" >
+                roleid,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="prId != null" >
+                #{prId,jdbcType=BIGINT},
+            </if>
+            <if test="powerid != null" >
+                #{powerid,jdbcType=BIGINT},
+            </if>
+            <if test="roleid != null" >
+                #{roleid,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.cmpay.zz.entity.Power_RolesDO" >
+        update power_roles
+        <set >
+            <if test="powerid != null" >
+                powerid = #{powerid,jdbcType=BIGINT},
+            </if>
+            <if test="roleid != null" >
+                roleid = #{roleid,jdbcType=BIGINT},
+            </if>
+        </set>
+        where pr_id = #{prId,jdbcType=BIGINT}
+    </update>
+
+    <select id="find" resultMap="BaseResultMap" parameterType="com.cmpay.zz.entity.Power_RolesDO" >
+        select 
+        <include refid="Base_Column_List" />
+        from power_roles
+        <where >
+            <if test="prId != null" >
+                and pr_id = #{prId,jdbcType=BIGINT}
+            </if>
+            <if test="powerid != null" >
+                and powerid = #{powerid,jdbcType=BIGINT}
+            </if>
+            <if test="roleid != null" >
+                and roleid = #{roleid,jdbcType=BIGINT}
+            </if>
+        </where>
+    </select>
+</mapper>

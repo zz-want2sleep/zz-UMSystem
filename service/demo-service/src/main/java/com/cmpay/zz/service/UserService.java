@@ -20,11 +20,11 @@ public interface UserService {
 /**
 *description: 通过id查询用户
 * @author: zhangzhe
- * @param userInfoBO 用户id
+ * @param id 用户id
 * @return: com.cmpay.zz.entity.UsersDO
 * @Date: 2020/6/22 0022
 */
-    public UserInfoBO getUserById(UserInfoBO userInfoBO);
+    public UserInfoBO getUserById(Long id);
 /**
 *description: 分页查询
 * @author: zhangzhe
@@ -71,6 +71,6 @@ public void update(UserInfoBO userInfoBO);
 * @return: void
 * @Date: 2020/6/28 0028
 */
-public void updatePassword( String oldPassword,String newPassword,Long id);
+public void updatePassword( String oldPassword,String newPassword,Long userId);
 
 }

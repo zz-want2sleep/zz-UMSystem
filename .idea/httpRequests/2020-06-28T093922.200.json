@@ -1,0 +1,17 @@
+{
+  "requestId": "buidemo006282139220000157002",
+  "msgId": null,
+  "startDateTime": "2020-06-28T21:39:22.116",
+  "locale": "zh_CN",
+  "clientIp": "127.0.0.1",
+  "business": null,
+  "entryTx": "UserController.update",
+  "uri": null,
+  "userId": null,
+  "token": null,
+  "loginName": null,
+  "tag": null,
+  "body": null,
+  "msgCd": "UPM00000",
+  "msgInfo": null
+}

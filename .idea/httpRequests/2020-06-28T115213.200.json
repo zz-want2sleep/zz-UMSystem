@@ -1,0 +1,17 @@
+{
+  "requestId": "buidemo006282352130000163001",
+  "msgId": null,
+  "startDateTime": "2020-06-28T23:52:13.204",
+  "locale": "zh_CN",
+  "clientIp": "127.0.0.1",
+  "business": null,
+  "entryTx": "UserController.updatePassword",
+  "uri": null,
+  "userId": null,
+  "token": null,
+  "loginName": null,
+  "tag": null,
+  "body": null,
+  "msgCd": "SYS00002",
+  "msgInfo": "对不起,系统正忙!"
+}

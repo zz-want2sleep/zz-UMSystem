@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.cloud:spring-cloud-stream-binder-kafka:1.2.1.RELEASE">
+    <CLASSES>
+      <root url="jar://J:/gradleRepository1/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka/1.2.1.RELEASE/96135663911ca8e8a3f5cb8b908ba984fed73b22/spring-cloud-stream-binder-kafka-1.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://J:/gradleRepository1/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-stream-binder-kafka/1.2.1.RELEASE/2c72c05eeaefce3bf19d9cd14c29704d9ef94794/spring-cloud-stream-binder-kafka-1.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

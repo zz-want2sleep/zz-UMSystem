@@ -20,7 +20,7 @@ public class RoleInfoQueryBO {
     /**
      * 角色id
      */
-    private Long id;
+    private Long roleId;
     /**
      * 角色姓名
      */
@@ -30,9 +30,9 @@ public class RoleInfoQueryBO {
      */
     private String note;
     /**
-     * 创建人
+     * 创建角色
      */
-    private String createBy;
+    private Long createBy;
     /**
      * 是否可用
      */
@@ -43,9 +43,9 @@ public class RoleInfoQueryBO {
 //    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createDate;
     /**
-     * 修改人
+     * 更新角色
      */
-    private String updateBy;
+    private Long updateBy;
     /**
      * 修改时间
      */

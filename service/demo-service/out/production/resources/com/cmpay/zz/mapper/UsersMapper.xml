@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmpay.zz.dao.IUsersDao" >
+
+    <resultMap id="BaseResultMap" type="com.cmpay.zz.entity.UsersDO" >
+        <id column="user_id" property="userId" jdbcType="BIGINT" />
+        <result column="login_name" property="loginName" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+        <result column="email" property="email" jdbcType="VARCHAR" />
+        <result column="phonenumber" property="phonenumber" jdbcType="BIGINT" />
+        <result column="create_by" property="createBy" jdbcType="BIGINT" />
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+        <result column="update_by" property="updateBy" jdbcType="BIGINT" />
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+        <result column="is_use" property="isUse" jdbcType="TINYINT" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        user_id, login_name, password, email, phonenumber, create_by, create_date, update_by, 
+        update_date, is_use
+    </sql>
+
+    <select id="get" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from users
+        where user_id = #{userId,jdbcType=BIGINT}
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Long" >
+        delete from users
+        where user_id = #{userId,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.cmpay.zz.entity.UsersDO" >
+        insert into users
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="userId != null" >
+                user_id,
+            </if>
+            <if test="loginName != null" >
+                login_name,
+            </if>
+            <if test="password != null" >
+                password,
+            </if>
+            <if test="email != null" >
+                email,
+            </if>
+            <if test="phonenumber != null" >
+                phonenumber,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="isUse != null" >
+                is_use,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="userId != null" >
+                #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="loginName != null" >
+                #{loginName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null" >
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null" >
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="phonenumber != null" >
+                #{phonenumber,jdbcType=BIGINT},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=BIGINT},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=BIGINT},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isUse != null" >
+                #{isUse,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.cmpay.zz.entity.UsersDO" >
+        update users
+        <set >
+            <if test="loginName != null" >
+                login_name = #{loginName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null" >
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null" >
+                email = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="phonenumber != null" >
+                phonenumber = #{phonenumber,jdbcType=BIGINT},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=BIGINT},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=BIGINT},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isUse != null" >
+                is_use = #{isUse,jdbcType=TINYINT},
+            </if>
+        </set>
+        where user_id = #{userId,jdbcType=BIGINT}
+    </update>
+
+    <select id="find" resultMap="BaseResultMap" parameterType="com.cmpay.zz.entity.UsersDO" >
+        select 
+        <include refid="Base_Column_List" />
+        from users
+        <where >
+            <if test="userId != null" >
+                and user_id = #{userId,jdbcType=BIGINT}
+            </if>
+            <if test="loginName != null" >
+                and login_name = #{loginName,jdbcType=VARCHAR}
+            </if>
+            <if test="password != null" >
+                and password = #{password,jdbcType=VARCHAR}
+            </if>
+            <if test="email != null" >
+                and email = #{email,jdbcType=VARCHAR}
+            </if>
+            <if test="phonenumber != null" >
+                and phonenumber = #{phonenumber,jdbcType=BIGINT}
+            </if>
+            <if test="createBy != null" >
+                and create_by = #{createBy,jdbcType=BIGINT}
+            </if>
+            <if test="createDate != null" >
+                and create_date = #{createDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="updateBy != null" >
+                and update_by = #{updateBy,jdbcType=BIGINT}
+            </if>
+            <if test="updateDate != null" >
+                and update_date = #{updateDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="isUse != null" >
+                and is_use = #{isUse,jdbcType=TINYINT}
+            </if>
+        </where>
+    </select>
+</mapper>

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
 * @program: UserInfoBO
@@ -20,7 +21,7 @@ public class UserInfoBO {
     /**
      * @Fields id 用户id
      */
-    private Long id;
+    private Long userId;
     /**
      * @Fields tName 用户名称
      */
@@ -38,18 +39,18 @@ public class UserInfoBO {
      */
     private Long phonenumber;
     /**
-     * @Fields createBy 创建人
+     * @Fields createBy 创建角色
      */
-    private String createBy;
+    private Long  createBy;
     /**
      * @Fields createDate 创建时间
      */
 //    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createDate;
     /**
-     * @Fields updateBy 更新人
+     * @Fields updateBy 更新角色
      */
-    private String updateBy;
+    private Long updateBy;
     /**
      * @Fields updateDate 更新时间
      */
@@ -59,4 +60,8 @@ public class UserInfoBO {
      * @Fields isUse 是否可用
      */
     private Byte isUse;
+    /**
+     * 角色集合
+     */
+    private List<Long> roleIds;
 }

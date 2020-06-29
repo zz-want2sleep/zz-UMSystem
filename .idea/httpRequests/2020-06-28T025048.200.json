@@ -1,0 +1,17 @@
+{
+  "requestId": "buidemo006281450480000144002",
+  "msgId": null,
+  "startDateTime": "2020-06-28T14:50:48.028",
+  "locale": "zh_CN",
+  "clientIp": "127.0.0.1",
+  "business": null,
+  "entryTx": "UserController.save",
+  "uri": null,
+  "userId": null,
+  "token": null,
+  "loginName": null,
+  "tag": null,
+  "body": null,
+  "msgCd": "TST00601",
+  "msgInfo": "对不起,系统正忙!"
+}

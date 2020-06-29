@@ -1,0 +1,17 @@
+{
+  "requestId": "buidemo006281546510000147001",
+  "msgId": null,
+  "startDateTime": "2020-06-28T15:46:52.101",
+  "locale": "zh_CN",
+  "clientIp": "127.0.0.1",
+  "business": null,
+  "entryTx": "UserController.deleteBatch",
+  "uri": null,
+  "userId": null,
+  "token": null,
+  "loginName": null,
+  "tag": null,
+  "body": null,
+  "msgCd": "UPM00000",
+  "msgInfo": null
+}

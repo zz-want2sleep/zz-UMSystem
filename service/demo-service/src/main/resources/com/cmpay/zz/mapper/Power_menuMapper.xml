@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmpay.zz.dao.IPower_menuDao" >
+
+    <resultMap id="BaseResultMap" type="com.cmpay.zz.entity.Power_menuDO" >
+        <id column="pm_id" property="pmId" jdbcType="BIGINT" />
+        <result column="powerid" property="powerid" jdbcType="BIGINT" />
+        <result column="menuid" property="menuid" jdbcType="BIGINT" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        pm_id, powerid, menuid
+    </sql>
+
+    <select id="get" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from power_menu
+        where pm_id = #{pmId,jdbcType=BIGINT}
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Long" >
+        delete from power_menu
+        where pm_id = #{pmId,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.cmpay.zz.entity.Power_menuDO" >
+        insert into power_menu
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="pmId != null" >
+                pm_id,
+            </if>
+            <if test="powerid != null" >
+                powerid,
+            </if>
+            <if test="menuid != null" >
+                menuid,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="pmId != null" >
+                #{pmId,jdbcType=BIGINT},
+            </if>
+            <if test="powerid != null" >
+                #{powerid,jdbcType=BIGINT},
+            </if>
+            <if test="menuid != null" >
+                #{menuid,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.cmpay.zz.entity.Power_menuDO" >
+        update power_menu
+        <set >
+            <if test="powerid != null" >
+                powerid = #{powerid,jdbcType=BIGINT},
+            </if>
+            <if test="menuid != null" >
+                menuid = #{menuid,jdbcType=BIGINT},
+            </if>
+        </set>
+        where pm_id = #{pmId,jdbcType=BIGINT}
+    </update>
+
+    <select id="find" resultMap="BaseResultMap" parameterType="com.cmpay.zz.entity.Power_menuDO" >
+        select 
+        <include refid="Base_Column_List" />
+        from power_menu
+        <where >
+            <if test="pmId != null" >
+                and pm_id = #{pmId,jdbcType=BIGINT}
+            </if>
+            <if test="powerid != null" >
+                and powerid = #{powerid,jdbcType=BIGINT}
+            </if>
+            <if test="menuid != null" >
+                and menuid = #{menuid,jdbcType=BIGINT}
+            </if>
+        </where>
+    </select>
+</mapper>

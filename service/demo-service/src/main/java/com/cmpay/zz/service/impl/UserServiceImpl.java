@@ -47,9 +47,10 @@ public class UserServiceImpl extends BaseService implements UserService {
     private IUsersDao userDao;
 
     @Override
-    public UserInfoBO getUserById(UserInfoBO userInfoBO) {
+    public UserInfoBO getUserById(Long id) {
 
-        UsersDO users = (UsersDO) userDao.get(userInfoBO.getId());
+        UsersDO users = (UsersDO) userDao.get(id);
+        UserInfoBO userInfoBO = new UserInfoBO();
         BeanUtils.copyProperties(userInfoBO, users);
         return userInfoBO;
     }
@@ -89,7 +90,7 @@ public class UserServiceImpl extends BaseService implements UserService {
 
 
 
-userInfoBO.setId(userNo);
+userInfoBO.setUserId(userNo);
 userInfoBO.setPassword(password);
 //userInfoBO.setLoginName(userInfoBO.getLoginName());
 //userInfoBO.setCreateBy(userInfoBO.getCreateBy());
@@ -167,9 +168,9 @@ if(res!=1){
     */
     @Override
     @Transactional(propagation = Propagation.REQUIRED,rollbackFor = Exception.class)
-    public void updatePassword(String oldPassword, String newPassword,Long id) {
+    public void updatePassword(String oldPassword, String newPassword,Long userId) {
         //hack一下
-        UsersDO usersDO =  userDao.get(id);
+        UsersDO usersDO =  userDao.get(userId);
         if(usersDO==null){
             BusinessException.throwBusinessException(MsgEnum.USER_NOT_EXISTS);
         }
@@ -182,7 +183,7 @@ if(res!=1){
         String salt = RandomStringUtils.randomAlphanumeric(20);
         newPassword = CryptoUtils.sha256Hash(newPassword,salt);
         map.put("newPassword",newPassword);
-        map.put("id",id);
+        map.put("userId",userId);
    int res= userDao.updatePassword(map);
    if(res!=1){
        BusinessException.throwBusinessException(MsgEnum.DB_UPDATE_FAILED);

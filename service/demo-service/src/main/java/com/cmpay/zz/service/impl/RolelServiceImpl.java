@@ -1,7 +1,9 @@
 package com.cmpay.zz.service.impl;
 
 import com.cmpay.lemon.common.exception.BusinessException;
+import com.cmpay.lemon.common.utils.BeanUtils;
 import com.cmpay.lemon.framework.page.PageInfo;
+import com.cmpay.lemon.framework.utils.PageUtils;
 import com.cmpay.zz.bo.RoleInfoBO;
 import com.cmpay.zz.bo.RoleInfoQueryBO;
 import com.cmpay.zz.dao.IRolesDao;
@@ -18,7 +20,8 @@ public class RolelServiceImpl implements RoleService {
     private IRolesDao rolesDao;
     @Override
     public RolesDO getRoleById(RoleInfoBO roleInfoBO) {
-        RolesDO rolesDO = rolesDao.get(roleInfoBO.getId());
+        RolesDO rolesDO = rolesDao.get(roleInfoBO.getRoleId());
+        System.out.println(rolesDO);
         if(rolesDO==null){
             BusinessException.throwBusinessException(MsgEnum.USER_NOT_EXISTS);
         }
@@ -28,6 +31,8 @@ public class RolelServiceImpl implements RoleService {
     @Override
     public PageInfo<RolesDO> findRoles(RoleInfoQueryBO roleInfoQueryBO) {
 
-        return null;
+        RolesDO rolesDO = new RolesDO();
+        BeanUtils.copyProperties(rolesDO,roleInfoQueryBO);
+        return PageUtils.pageQueryWithCount(roleInfoQueryBO.getPageNum(),roleInfoQueryBO.getPageSize(),()->rolesDao.find(rolesDO));
     }
 }

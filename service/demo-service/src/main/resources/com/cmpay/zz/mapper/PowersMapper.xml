@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmpay.zz.dao.IPowersDao" >
+
+    <resultMap id="BaseResultMap" type="com.cmpay.zz.entity.PowersDO" >
+        <id column="power_id" property="powerId" jdbcType="BIGINT" />
+        <result column="power_name" property="powerName" jdbcType="VARCHAR" />
+        <result column="powerType" property="powertype" jdbcType="VARCHAR" />
+        <result column="create_by" property="createBy" jdbcType="BIGINT" />
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+        <result column="update_by" property="updateBy" jdbcType="BIGINT" />
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+        <result column="is_use" property="isUse" jdbcType="TINYINT" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        power_id, power_name, powerType, create_by, create_date, update_by, update_date, 
+        is_use
+    </sql>
+
+    <select id="get" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+        select 
+        <include refid="Base_Column_List" />
+        from powers
+        where power_id = #{powerId,jdbcType=BIGINT}
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Long" >
+        delete from powers
+        where power_id = #{powerId,jdbcType=BIGINT}
+    </delete>
+
+    <insert id="insert" parameterType="com.cmpay.zz.entity.PowersDO" >
+        insert into powers
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="powerId != null" >
+                power_id,
+            </if>
+            <if test="powerName != null" >
+                power_name,
+            </if>
+            <if test="powertype != null" >
+                powerType,
+            </if>
+            <if test="createBy != null" >
+                create_by,
+            </if>
+            <if test="createDate != null" >
+                create_date,
+            </if>
+            <if test="updateBy != null" >
+                update_by,
+            </if>
+            <if test="updateDate != null" >
+                update_date,
+            </if>
+            <if test="isUse != null" >
+                is_use,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="powerId != null" >
+                #{powerId,jdbcType=BIGINT},
+            </if>
+            <if test="powerName != null" >
+                #{powerName,jdbcType=VARCHAR},
+            </if>
+            <if test="powertype != null" >
+                #{powertype,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                #{createBy,jdbcType=BIGINT},
+            </if>
+            <if test="createDate != null" >
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                #{updateBy,jdbcType=BIGINT},
+            </if>
+            <if test="updateDate != null" >
+                #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isUse != null" >
+                #{isUse,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.cmpay.zz.entity.PowersDO" >
+        update powers
+        <set >
+            <if test="powerName != null" >
+                power_name = #{powerName,jdbcType=VARCHAR},
+            </if>
+            <if test="powertype != null" >
+                powerType = #{powertype,jdbcType=VARCHAR},
+            </if>
+            <if test="createBy != null" >
+                create_by = #{createBy,jdbcType=BIGINT},
+            </if>
+            <if test="createDate != null" >
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null" >
+                update_by = #{updateBy,jdbcType=BIGINT},
+            </if>
+            <if test="updateDate != null" >
+                update_date = #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isUse != null" >
+                is_use = #{isUse,jdbcType=TINYINT},
+            </if>
+        </set>
+        where power_id = #{powerId,jdbcType=BIGINT}
+    </update>
+
+    <select id="find" resultMap="BaseResultMap" parameterType="com.cmpay.zz.entity.PowersDO" >
+        select 
+        <include refid="Base_Column_List" />
+        from powers
+        <where >
+            <if test="powerId != null" >
+                and power_id = #{powerId,jdbcType=BIGINT}
+            </if>
+            <if test="powerName != null" >
+                and power_name = #{powerName,jdbcType=VARCHAR}
+            </if>
+            <if test="powertype != null" >
+                and powerType = #{powertype,jdbcType=VARCHAR}
+            </if>
+            <if test="createBy != null" >
+                and create_by = #{createBy,jdbcType=BIGINT}
+            </if>
+            <if test="createDate != null" >
+                and create_date = #{createDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="updateBy != null" >
+                and update_by = #{updateBy,jdbcType=BIGINT}
+            </if>
+            <if test="updateDate != null" >
+                and update_date = #{updateDate,jdbcType=TIMESTAMP}
+            </if>
+            <if test="isUse != null" >
+                and is_use = #{isUse,jdbcType=TINYINT}
+            </if>
+        </where>
+    </select>
+</mapper>

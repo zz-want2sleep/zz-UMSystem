@@ -1,0 +1,26 @@
+{
+  "requestId": "buidemo006291411540000158001",
+  "msgId": null,
+  "startDateTime": "2020-06-29T14:11:54.202",
+  "locale": "zh_CN",
+  "clientIp": "127.0.0.1",
+  "business": null,
+  "entryTx": "RoleController.getRoleById",
+  "uri": null,
+  "userId": null,
+  "token": null,
+  "loginName": null,
+  "tag": null,
+  "body": {
+    "id": 1,
+    "roleName": null,
+    "note": null,
+    "createBy": null,
+    "isUse": null,
+    "createDate": null,
+    "updateBy": null,
+    "updateDate": null
+  },
+  "msgCd": "UPM00000",
+  "msgInfo": null
+}

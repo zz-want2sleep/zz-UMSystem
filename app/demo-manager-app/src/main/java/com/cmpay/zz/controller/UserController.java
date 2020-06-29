@@ -2,6 +2,8 @@ package com.cmpay.zz.controller;
 
 //import com.cmpay.gw.codec.annotation.GatewayApi;
 
+import com.cmpay.framework.data.request.GenericDTO;
+import com.cmpay.framework.data.response.GenericRspDTO;
 import com.cmpay.lemon.common.utils.BeanUtils;
 import com.cmpay.lemon.framework.annotation.QueryBody;
 import com.cmpay.lemon.framework.controller.BaseController;
@@ -9,6 +11,8 @@ import com.cmpay.lemon.framework.data.DefaultRspDTO;
 
 import com.cmpay.lemon.framework.data.NoBody;
 import com.cmpay.lemon.framework.page.PageInfo;
+import com.cmpay.lemon.framework.security.SecurityUtils;
+import com.cmpay.lemon.framework.security.UserInfoBase;
 import com.cmpay.zz.bo.UserInfoBO;
 import com.cmpay.zz.bo.UserInfoQueryBO;
 import com.cmpay.zz.dto.*;
@@ -18,7 +22,9 @@ import com.cmpay.zz.service.UserService;
 
 
 import com.cmpay.zz.utils.BeanConvertUtils;
+import com.fasterxml.jackson.databind.util.BeanUtil;
 import com.rabbitmq.http.client.domain.UserInfo;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.DefaultResponseErrorHandler;
@@ -60,7 +66,7 @@ public class UserController extends BaseController {
      */
     @GetMapping("/user/info")
     public DefaultRspDTO<UserInfoDTO> getUserInfo(@QueryBody UserInfoDTO userInfoDTO) {
-        return getUserInfo(userInfoDTO.getId());
+        return getUserInfo(userInfoDTO.getUserId());
     }
 
     /**
@@ -71,8 +77,8 @@ public class UserController extends BaseController {
      * @return: com.cmpay.zz.dto.UserInfoQueryRspDTO
      * @Date: 2020/6/24 0024
      */
-    @GetMapping("/user/list")
-    public UserInfoQueryRspDTO getUserInfoPage(@QueryBody UserInfoQueryReqDTO userInfoDTOUserInfoQueryReqDTO) {
+    @GetMapping("/v1/demo/user/list")
+    public GenericRspDTO<UserInfoQueryRspDTO> getUserInfoPage(@QueryBody UserInfoQueryReqDTO userInfoDTOUserInfoQueryReqDTO) {
         UserInfoQueryBO userInfoQueryBO = new UserInfoQueryBO();
         BeanUtils.copyProperties(userInfoQueryBO, userInfoDTOUserInfoQueryReqDTO);
         PageInfo<UsersDO> page = userService.findUsers(userInfoQueryBO);
@@ -86,8 +92,8 @@ public class UserController extends BaseController {
         userInfoQueryRspDTO.setTotal(page.getTotal());
         userInfoQueryRspDTO.setMsgCd(MsgEnum.SUCCESS.getMsgCd());
         userInfoQueryRspDTO.setMsgInfo(MsgEnum.SUCCESS.getMsgInfo());
-
-        return userInfoQueryRspDTO;
+        return GenericRspDTO.newInstance(MsgEnum.SUCCESS,userInfoQueryRspDTO);
+//        return userInfoQueryRspDTO;
 
     }
 
@@ -99,7 +105,7 @@ public class UserController extends BaseController {
      * @return: com.cmpay.lemon.framework.data.DefaultRspDTO<com.cmpay.lemon.framework.data.NoBody>
      * @Date: 2020/6/23 0023
      */
-    @PostMapping("/user/add")
+    @PostMapping("/v1/demo/user/save")
     public DefaultRspDTO<NoBody> save(@RequestBody UserAddReqDTO userAddReqDTO) {
 
         UserInfoBO userInfoBO = new UserInfoBO();
@@ -117,7 +123,7 @@ public class UserController extends BaseController {
 */
 @PostMapping("/user/delete")
     public DefaultRspDTO<NoBody> deleteBatch(@RequestBody UserDeleteDTO userDeleteDTO) {
-        userService.deleteBatch(userDeleteDTO.getId());
+        userService.deleteBatch(userDeleteDTO.getUserId());
         return DefaultRspDTO.newSuccessInstance();
     }
 
@@ -143,7 +149,7 @@ public DefaultRspDTO<NoBody> update(@RequestBody UserUpdateReqDTO userUpdateReqD
 */
 @PostMapping("user/updatePassword")
 public DefaultRspDTO<NoBody> updatePassword(@RequestBody UserPasswordReqDTO userPasswordReqDTO){
-    userService.updatePassword(userPasswordReqDTO.getOldPassword(),userPasswordReqDTO.getNewPassword(),userPasswordReqDTO.getId());
+    userService.updatePassword(userPasswordReqDTO.getOldPassword(),userPasswordReqDTO.getNewPassword(),userPasswordReqDTO.getUserId());
     return DefaultRspDTO.newSuccessInstance();
 }
 
@@ -157,11 +163,17 @@ public DefaultRspDTO<NoBody> updatePassword(@RequestBody UserPasswordReqDTO user
      */
     private DefaultRspDTO<UserInfoDTO> getUserInfo(Long id) {
         UserInfoBO userInfoBO = new UserInfoBO();
-        userInfoBO.setId(id);
-        userInfoBO = userService.getUserById(userInfoBO);
+//        userInfoBO.setId(id);
+        userInfoBO = userService.getUserById(id);
         UserInfoDTO userInfoDTO = new UserInfoDTO();
         BeanUtils.copyProperties(userInfoDTO, userInfoBO);
         return DefaultRspDTO.newSuccessInstance(userInfoDTO);
     }
-
+@GetMapping("/v1/demo/user/info")
+    public GenericRspDTO<UserInfoDTO> getUserInfo(@QueryBody GenericDTO genericDTO){
+    UserInfoBase loginUser = SecurityUtils.getLoginUser();
+    UserInfoBO userInfoBO = userService.getUserById(Long.valueOf(loginUser.getUserId()));
+    UserInfoDTO userDTO = BeanUtils.copyPropertiesReturnDest(new UserInfoDTO(),userInfoBO);
+    return GenericRspDTO.newInstance(MsgEnum.SUCCESS,userDTO);
+}
 }

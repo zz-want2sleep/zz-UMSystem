@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zz-UMSystem.iml" filepath="$PROJECT_DIR$/.idea/modules/zz-UMSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/zz-UMSystem.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/zz-UMSystem.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/demo-manager-app/zz-UMSystem.app.demo-manager-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/demo-manager-app/zz-UMSystem.app.demo-manager-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/demo-manager-app/zz-UMSystem.app.demo-manager-app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/demo-manager-app/zz-UMSystem.app.demo-manager-app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/demo-manager-app/zz-UMSystem.app.demo-manager-app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/demo-manager-app/zz-UMSystem.app.demo-manager-app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/zz-UMSystem.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/zz-UMSystem.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/zz-UMSystem.app.test.iml" filepath="$PROJECT_DIR$/.idea/modules/app/zz-UMSystem.app.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/zz-UMSystem.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/zz-UMSystem.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/demo-auth/zz-UMSystem.common.demo-auth.iml" filepath="$PROJECT_DIR$/.idea/modules/common/demo-auth/zz-UMSystem.common.demo-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/demo-auth/zz-UMSystem.common.demo-auth.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/demo-auth/zz-UMSystem.common.demo-auth.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/demo-auth/zz-UMSystem.common.demo-auth.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/demo-auth/zz-UMSystem.common.demo-auth.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/zz-UMSystem.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/zz-UMSystem.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/zz-UMSystem.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/zz-UMSystem.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/constant/zz-UMSystem.constant.iml" filepath="$PROJECT_DIR$/.idea/modules/constant/zz-UMSystem.constant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/constant/demo-constant/zz-UMSystem.constant.demo-constant.iml" filepath="$PROJECT_DIR$/.idea/modules/constant/demo-constant/zz-UMSystem.constant.demo-constant.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/constant/demo-constant/zz-UMSystem.constant.demo-constant.main.iml" filepath="$PROJECT_DIR$/.idea/modules/constant/demo-constant/zz-UMSystem.constant.demo-constant.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/constant/demo-constant/zz-UMSystem.constant.demo-constant.test.iml" filepath="$PROJECT_DIR$/.idea/modules/constant/demo-constant/zz-UMSystem.constant.demo-constant.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/constant/zz-UMSystem.constant.main.iml" filepath="$PROJECT_DIR$/.idea/modules/constant/zz-UMSystem.constant.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/constant/zz-UMSystem.constant.test.iml" filepath="$PROJECT_DIR$/.idea/modules/constant/zz-UMSystem.constant.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/interface/zz-UMSystem.interface.iml" filepath="$PROJECT_DIR$/.idea/modules/interface/zz-UMSystem.interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/interface/demo-manager-interface/zz-UMSystem.interface.demo-manager-interface.iml" filepath="$PROJECT_DIR$/.idea/modules/interface/demo-manager-interface/zz-UMSystem.interface.demo-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/interface/demo-manager-interface/zz-UMSystem.interface.demo-manager-interface.main.iml" filepath="$PROJECT_DIR$/.idea/modules/interface/demo-manager-interface/zz-UMSystem.interface.demo-manager-interface.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/interface/demo-manager-interface/zz-UMSystem.interface.demo-manager-interface.test.iml" filepath="$PROJECT_DIR$/.idea/modules/interface/demo-manager-interface/zz-UMSystem.interface.demo-manager-interface.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/interface/zz-UMSystem.interface.main.iml" filepath="$PROJECT_DIR$/.idea/modules/interface/zz-UMSystem.interface.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/interface/zz-UMSystem.interface.test.iml" filepath="$PROJECT_DIR$/.idea/modules/interface/zz-UMSystem.interface.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/zz-UMSystem.service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/zz-UMSystem.service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/demo-service/zz-UMSystem.service.demo-service.iml" filepath="$PROJECT_DIR$/.idea/modules/service/demo-service/zz-UMSystem.service.demo-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/demo-service/zz-UMSystem.service.demo-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/demo-service/zz-UMSystem.service.demo-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/demo-service/zz-UMSystem.service.demo-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/service/demo-service/zz-UMSystem.service.demo-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/zz-UMSystem.service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/service/zz-UMSystem.service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/service/zz-UMSystem.service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/service/zz-UMSystem.service.test.iml" />
+    </modules>
+  </component>
+</project>

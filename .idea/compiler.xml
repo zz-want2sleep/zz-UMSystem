@@ -4,5 +4,27 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zz-UMSystem.app.demo-manager-app.main" target="1.8" />
+      <module name="zz-UMSystem.app.demo-manager-app.test" target="1.8" />
+      <module name="zz-UMSystem.app.main" target="1.8" />
+      <module name="zz-UMSystem.app.test" target="1.8" />
+      <module name="zz-UMSystem.common.demo-auth.main" target="1.8" />
+      <module name="zz-UMSystem.common.demo-auth.test" target="1.8" />
+      <module name="zz-UMSystem.common.main" target="1.8" />
+      <module name="zz-UMSystem.common.test" target="1.8" />
+      <module name="zz-UMSystem.constant.demo-constant.main" target="1.8" />
+      <module name="zz-UMSystem.constant.demo-constant.test" target="1.8" />
+      <module name="zz-UMSystem.constant.main" target="1.8" />
+      <module name="zz-UMSystem.constant.test" target="1.8" />
+      <module name="zz-UMSystem.interface.demo-manager-interface.main" target="1.8" />
+      <module name="zz-UMSystem.interface.demo-manager-interface.test" target="1.8" />
+      <module name="zz-UMSystem.interface.main" target="1.8" />
+      <module name="zz-UMSystem.interface.test" target="1.8" />
+      <module name="zz-UMSystem.service.demo-service.main" target="1.8" />
+      <module name="zz-UMSystem.service.demo-service.test" target="1.8" />
+      <module name="zz-UMSystem.service.main" target="1.8" />
+      <module name="zz-UMSystem.service.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

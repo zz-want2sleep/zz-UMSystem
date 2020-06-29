@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserPasswordReqDTO {
-    private Long id;
+    private Long userId;
     private String oldPassword;
     private String newPassword;
 }

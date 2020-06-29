@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="com.cmpay" externalSystemModuleVersion="1.0-SNAPSHOT" linkedProjectId=":common:demo-auth" linkedProjectPath="$MODULE_DIR$/../../../../common/demo-auth" rootProjectPath="$MODULE_DIR$/../../../.." />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../common/demo-auth">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../common/demo-auth/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../common/demo-auth/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../common/demo-auth/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

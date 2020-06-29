@@ -49,6 +49,8 @@ public class LoginAuthenticationProcessor  extends AbstractGenericMatchableAuthe
 
         HttpServletRequest request = genericAuthenticationToken.getAuthenticationRequest().getHttpServletRequest();
         UserInfoBO userInfoBO = bindLoginData(request);
+        System.out.println(userInfoBO);
+
         UserInfoBO login = loginService.login(userInfoBO);
         System.out.println(login.getId().toString()+login.getLoginName()+login.getPassword());
         return new SimpleUserInfo(login.getId().toString(),login.getLoginName(),login.getPassword());

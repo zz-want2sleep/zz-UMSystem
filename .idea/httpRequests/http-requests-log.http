@@ -1,0 +1,611 @@
+POST http://localhost:6006/user/role
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+<> 2020-06-29T022916.200.json
+
+###
+
+POST http://localhost:6006/user/role
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+<> 2020-06-29T022500.200.json
+
+###
+
+POST http://localhost:6006/user/role
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+<> 2020-06-29T020718.200.json
+
+###
+
+POST http://localhost:8977/user/role
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+<> 2020-06-29T011403.200.json
+
+###
+
+POST http://localhost:6001/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+<> 2020-06-28T115727.200.json
+
+###
+
+POST http://localhost:6001/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+<> 2020-06-28T115213.200.json
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+<> 2020-06-28T113155.200.json
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+<> 2020-06-28T113129.200.json
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+<> 2020-06-28T112439.200.json
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+<> 2020-06-28T112130.200.json
+
+###
+
+POST http://localhost:6006/user/updatePassword
+Content-Type: application/json
+
+{
+"id": 1,
+  "oldPassword": "123456",
+  "newPassword": "1234567890"
+}
+
+<> 2020-06-28T110133.200.json
+
+###
+
+POST http://localhost:6006/user/update
+Content-Type: application/json
+
+{
+"id": 1,
+  "loginName": "张山",
+  "password": "654321",
+  "email": "707388418@qq.com",
+  "phonenumber": 123457677,
+  "updateBy": "张哲"
+}
+
+<> 2020-06-28T094232.200.json
+
+###
+
+POST http://localhost:6006/user/update
+Content-Type: application/json
+
+{
+"id": 1,
+  "loginName": "张山",
+  "password": "654321",
+  "email": "707388418@qq.com",
+  "phonenumber": 123457677,
+  "updateBy": "张哲"
+}
+
+###
+
+POST http://localhost:6006/user/update
+Content-Type: application/json
+
+{
+"id": 1,
+  "loginName": "张山",
+  "password": "654321",
+  "email": "707388418@qq.com",
+  "phonenumber": 123457677,
+  "updateBy": "张哲"
+}
+
+###
+
+POST http://localhost:6006/user/update
+Content-Type: application/json
+
+{
+"id": 1,
+  "loginName": "张山",
+  "password": "654321",
+  "email": "707388418@qq.com",
+  "phonenumber": 123457677,
+  "updateBy": "张哲"
+}
+
+<> 2020-06-28T094109.200.json
+
+###
+
+POST http://localhost:6006/user/update
+Content-Type: application/json
+
+{
+"id": 1,
+  "loginName": "张山",
+  "password": "654321",
+        "email": "707388418@qq.com",
+  "phonenumber": 123457677,
+  "updateBy": "张哲"
+}
+
+<> 2020-06-28T093922.200.json
+
+###
+
+POST http://localhost:6006/user/update
+Content-Type: application/json
+
+{
+"id": 1,
+  "loginName": "张三",
+  "password": "654321",
+        "email": "707388418@qq.com",
+  "phonenumber": 123457677
+}
+
+<> 2020-06-28T093637.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id":[1001,3]
+}
+
+<> 2020-06-28T034653.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id":[{"id":"1001"}]
+
+}
+
+<> 2020-06-28T034214.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id":[{"id":"1001L"}]
+
+}
+
+<> 2020-06-28T034206.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id":[{"id":1001}]
+
+}
+
+<> 2020-06-28T033513.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": [{"id":3}]
+
+}
+
+<> 2020-06-28T031726.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": [{"id":3},{"id":1001}]
+
+}
+
+<> 2020-06-28T031714.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": [{"id":3},{"id": 1001}]
+
+}
+
+<> 2020-06-28T031406.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": [{"id":3},{"id": 1001}]
+
+}
+
+<> 2020-06-28T031032.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": [{"id":3},{"id": 1001}]
+
+}
+
+<> 2020-06-28T030846.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": [{"id":"3","id":"1001"}]
+
+}
+
+<> 2020-06-28T030437.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": [{"id":"3","id":"1001"}]
+
+}
+
+<> 2020-06-28T030349.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": "3"
+}
+
+<> 2020-06-28T025955.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": "3,1001"
+}
+
+<> 2020-06-28T025947.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": "{3,1001}"
+}
+
+<> 2020-06-28T025735.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": "[1001,3]"
+}
+
+<> 2020-06-28T025644.200.json
+
+###
+
+POST http://localhost:8977/user/delete
+Content-Type: application/json
+
+{
+  "id": "{1001,3}"
+}
+
+<> 2020-06-28T025543.200.json
+
+###
+
+POST http://localhost:8977/user/add
+Content-Type: application/json
+
+{
+"loginName":"张鸿钢",
+"password":"123456",
+"email":"152929149@qq.com",
+"phonenumber":123456789,
+  "createBy": "张哲"
+}
+
+<> 2020-06-28T025048.200.json
+
+###
+
+POST http://localhost:8977/user/add
+Content-Type: application/json
+
+{
+"loginName":"张鸿钢",
+"password":"123456",
+"email":"152929149@qq.com",
+"phonenumber":123456789,
+  "createBy": "张哲"
+}
+
+<> 2020-06-28T010446.200.json
+
+###
+
+POST http://localhost:8977/user/add
+Content-Type: application/json
+
+{
+"loginName":"张鸿钢",
+"password":"123456",
+"email":"152929149@qq.com",
+"phonenumber":123456789,
+  "createBy": "张哲"
+}
+
+###
+
+POST http://localhost:8977/user/add
+Content-Type: application/json
+
+{
+"loginName":"张鸿钢",
+"password":"123456",
+"email":"152929149@qq.com",
+"phonenumber":123456789,
+  "createBy": "张哲"
+}
+
+###
+

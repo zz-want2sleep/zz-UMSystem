@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="com.cmpay.bui" externalSystemModuleVersion="1.0.0" linkedProjectId=":app:demo-manager-app" linkedProjectPath="$MODULE_DIR$/../../../../app/demo-manager-app" rootProjectPath="$MODULE_DIR$/../../../.." />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../app/demo-manager-app">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../app/demo-manager-app/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../app/demo-manager-app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../app/demo-manager-app/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

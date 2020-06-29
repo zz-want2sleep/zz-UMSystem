@@ -1,0 +1,17 @@
+{
+  "requestId": null,
+  "msgId": null,
+  "startDateTime": null,
+  "locale": null,
+  "clientIp": null,
+  "business": null,
+  "entryTx": null,
+  "uri": null,
+  "userId": null,
+  "token": null,
+  "loginName": null,
+  "tag": null,
+  "body": null,
+  "msgCd": "SYS00001",
+  "msgInfo": "对不起,系统正忙!"
+}
