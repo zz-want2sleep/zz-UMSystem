@@ -13,12 +13,14 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-
+    compile project(':service:demo-service')
+    compile project(':interface:demo-manager-interface')
     //登录权限效验包
     compile("com.cmpay:lemon-framework-web")
     compile("com.cmpay:lemon-framework-starter-session")
     compile("com.cmpay:lemon-framework-starter-security")
     compile("com.cmpay:lemon-framework-starter-security-refresh")
+
 
 
 }

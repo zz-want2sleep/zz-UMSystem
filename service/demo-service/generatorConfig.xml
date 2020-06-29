@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <classPathEntry
-            location="C:\Users\lihuiquan\.m2\repository\mysql\mysql-connector-java\8.0.13\mysql-connector-java-8.0.13.jar"/>
+            location="J:\gradleRepository1\caches\modules-2\files-2.1\mysql\mysql-connector-java\8.0.15\1cd928d0f1a93563993ce1d8b468217ea0d19b11\mysql-connector-java-8.0.15.jar"/>
 
     <context id="mysql" targetRuntime="MyBatis3" defaultModelType="lemonflat">
 
@@ -22,8 +22,9 @@
             <property name="suppressAllComments" value="false"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://172.16.48.55:3306/sitbui"
-                        userId="buiadm" password="111()">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Asia/Shanghai"
+                        userId="root" password="zz226000">
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -60,10 +61,16 @@
         <table tableName="roles" domainObjectName="RolesDO" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
-        <table tableName="menu_roles" domainObjectName="Menu_RolesDO" enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="powers" domainObjectName="PowersDO" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
-        <table tableName="roles_users" domainObjectName="Roles_UsersDO" enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="power_roles" domainObjectName="Power_RolesDO" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table tableName="users_roles" domainObjectName="Users_RolesDO" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table tableName="power_menu" domainObjectName="Power_menuDO" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
         </table>
     </context>

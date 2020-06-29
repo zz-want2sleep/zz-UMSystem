@@ -60,8 +60,10 @@ subprojects {
     }
     dependencies {
         // resolve dependencies conflicts
+ 
         compileOnly("org.springframework.boot:spring-boot-configuration-processor")
         testCompile("org.springframework.boot:spring-boot-starter-test")
+//        compile("com.cmpay.gw:lemon-gateway-api-client-starter:2.0.2-SNAPSHOT")
     }
 
     //打包源代码

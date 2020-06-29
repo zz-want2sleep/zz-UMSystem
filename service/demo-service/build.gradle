@@ -17,8 +17,9 @@ dependencies {
     //lemon核心框架starter
     compile("com.cmpay:lemon-framework-starter")
     compile("org.projectlombok:lombok")
+    compile("com.github.penggle:kaptcha:2.3.2")
 
-
+    compile("org.apache.shiro:shiro-core:1.4.0")
 
 }
 jar {
